@@ -348,6 +348,27 @@ body.page-people{
 body.page-contact{
   --bg:#0E3B4E; --panel:#134C63; --panel-line:#1F7089; --accent:#2EE6C8; --accent-dim:#1F9E88; --signal:#7CF5DE;
 }
+
+/* ---- CAREER: light yellow, warm amber accent, dark text for readability ---- */
+body.page-career{
+  --bg:#FCF3D6; --panel:#FFFFFF; --panel-line:#E8D9A0;
+  --ink:#2A2414; --ink-dim:#7C6F4E;
+  --accent:#C6861A; --accent-dim:#9C6B14; --signal:#E2A53D;
+}
+.page-career .hero-bg{ position:absolute; inset:0; background: radial-gradient(ellipse at 75% 15%, rgba(198,134,26,0.14), transparent 55%); z-index:0; }
+
+/* ---- job listing components (Career page) ---- */
+.meta-strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--panel-line); border:1px solid var(--panel-line); margin:26px 0; }
+.meta-strip > div{ background:var(--panel); padding:16px 14px; text-align:center; }
+.meta-strip .meta-label{ font-family:var(--mono); font-size:10.5px; color:var(--accent); letter-spacing:.05em; margin-bottom:6px; }
+.meta-strip .meta-value{ font-size:14px; font-weight:600; color:var(--ink); }
+@media (max-width:700px){ .meta-strip{ grid-template-columns:repeat(2,1fr); } }
+.job-tags{ display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 0; }
+.job-tag{ font-family:var(--mono); font-size:11.5px; padding:5px 11px; border:1px solid var(--accent-dim); color:var(--accent-dim); }
+.apply-box{ background: var(--accent); color:#1b1304; padding:26px 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+.apply-box a{ color:#1b1304; font-weight:600; text-decoration:underline; }
+.apply-box .apply-label{ font-family:var(--mono); font-size:12px; opacity:.75; display:block; margin-bottom:4px; }
+.apply-box strong{ display:block; }
 .page-contact .hero-bg{ position:absolute; inset:0; background: radial-gradient(ellipse at 75% 25%, rgba(79,195,224,0.10), transparent 55%); z-index:0; }
 .page-contact .breathe{ fill:none; stroke: var(--accent); stroke-width:1.4; animation: ctBreathe 2.8s ease-in-out infinite; transform-origin: center; }
 @keyframes ctBreathe{ 0%,100%{ opacity:.35; transform: scale(1); } 50%{ opacity:1; transform: scale(1.08); } }
