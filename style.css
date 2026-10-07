@@ -354,6 +354,7 @@ body.page-career{
   --bg:#FCF3D6; --panel:#FFFFFF; --panel-line:#E8D9A0;
   --ink:#2A2414; --ink-dim:#7C6F4E;
   --accent:#C6861A; --accent-dim:#9C6B14; --signal:#E2A53D;
+  background: linear-gradient(165deg, #FFF6DC 0%, #FDE4B8 55%, #FBD9A6 100%);
 }
 .page-career .hero-bg{ position:absolute; inset:0; background: radial-gradient(ellipse at 75% 15%, rgba(198,134,26,0.14), transparent 55%); z-index:0; }
 
