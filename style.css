@@ -358,6 +358,12 @@ body.page-career{
 }
 .page-career .hero-bg{ position:absolute; inset:0; background: radial-gradient(ellipse at 75% 15%, rgba(198,134,26,0.14), transparent 55%); z-index:0; }
 
+/* ---- EVENT: deep violet, vivid lavender accent ---- */
+body.page-event{
+  --bg:#170B2E; --panel:#241440; --panel-line:#3C2566; --accent:#B57CFF; --accent-dim:#7A4FBF; --signal:#D9B8FF;
+}
+.page-event .hero-bg{ position:absolute; inset:0; background: radial-gradient(ellipse at 70% 15%, rgba(181,124,255,0.16), transparent 55%); z-index:0; }
+
 /* ---- job listing components (Career page) ---- */
 .meta-strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--panel-line); border:1px solid var(--panel-line); margin:26px 0; }
 .meta-strip > div{ background:var(--panel); padding:16px 14px; text-align:center; }
