@@ -29,13 +29,46 @@
 
   <section class="hero" aria-label="Event introduction">
     <div class="hero-bg" aria-hidden="true"></div>
-    <div class="wrap" style="position:relative; z-index:2;">
-      <p class="eyebrow">UPCOMING EVENT &mdash; DECEMBER 10&ndash;11</p>
-      <h1 class="headline" style="max-width:18ch;">Secure Silicon: Workshop on Hardware Security and AI-assisted Secure Chip Design</h1>
-      <p class="lede">Two days, two tracks &mdash; side-channel analysis in the morning, AI-assisted secure chip design through the rest of the workshop. Hands-on labs throughout.</p>
-      <div class="cta-row">
-        <a href="#program" class="btn primary">See the program</a>
-        <a href="contact.html" class="btn ghost">Register interest</a>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">UPCOMING EVENT &mdash; DECEMBER 10&ndash;11</p>
+        <h1 class="headline" style="max-width:18ch;">Secure Silicon: Workshop on Hardware Security and AI-assisted Secure Chip Design</h1>
+        <p class="lede">Two days, two tracks &mdash; side-channel analysis in the morning, AI-assisted secure chip design through the rest of the workshop. Hands-on labs throughout.</p>
+        <div class="cta-row">
+          <a href="#program" class="btn primary">See the program</a>
+          <a href="contact.html" class="btn ghost">Register interest</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="neural-wrap">
+          <svg viewBox="0 0 240 240" aria-hidden="true">
+            <line class="neural-link" style="animation-delay:0s" x1="120" y1="120" x2="215" y2="120"/>
+            <line class="neural-link" style="animation-delay:.4s" x1="120" y1="120" x2="167.5" y2="37.7"/>
+            <line class="neural-link" style="animation-delay:.8s" x1="120" y1="120" x2="72.5" y2="37.7"/>
+            <line class="neural-link" style="animation-delay:1.2s" x1="120" y1="120" x2="25" y2="120"/>
+            <line class="neural-link" style="animation-delay:1.6s" x1="120" y1="120" x2="72.5" y2="202.3"/>
+            <line class="neural-link" style="animation-delay:2s" x1="120" y1="120" x2="167.5" y2="202.3"/>
+            <line class="neural-link" style="opacity:.4; animation-delay:.2s" x1="215" y1="120" x2="167.5" y2="37.7"/>
+            <line class="neural-link" style="opacity:.4; animation-delay:.6s" x1="167.5" y1="37.7" x2="72.5" y2="37.7"/>
+            <line class="neural-link" style="opacity:.4; animation-delay:1s" x1="72.5" y1="37.7" x2="25" y2="120"/>
+            <line class="neural-link" style="opacity:.4; animation-delay:1.4s" x1="25" y1="120" x2="72.5" y2="202.3"/>
+            <line class="neural-link" style="opacity:.4; animation-delay:1.8s" x1="72.5" y1="202.3" x2="167.5" y2="202.3"/>
+            <line class="neural-link" style="opacity:.4; animation-delay:2.2s" x1="167.5" y1="202.3" x2="215" y2="120"/>
+
+            <g class="orbit-group"><circle class="orbit-dot" cx="232" cy="120" r="3.4"/></g>
+            <g class="orbit-group rev"><circle class="orbit-dot" cx="8" cy="120" r="3.4"/></g>
+
+            <circle class="neural-node" cx="215" cy="120" r="7"/><circle class="neural-node-core" cx="215" cy="120" r="3"/>
+            <circle class="neural-node" cx="167.5" cy="37.7" r="7"/><circle class="neural-node-core" cx="167.5" cy="37.7" r="3"/>
+            <circle class="neural-node" cx="72.5" cy="37.7" r="7"/><circle class="neural-node-core" cx="72.5" cy="37.7" r="3"/>
+            <circle class="neural-node" cx="25" cy="120" r="7"/><circle class="neural-node-core" cx="25" cy="120" r="3"/>
+            <circle class="neural-node" cx="72.5" cy="202.3" r="7"/><circle class="neural-node-core" cx="72.5" cy="202.3" r="3"/>
+            <circle class="neural-node" cx="167.5" cy="202.3" r="7"/><circle class="neural-node-core" cx="167.5" cy="202.3" r="3"/>
+
+            <polygon class="neural-core" points="165,120 142.5,81 97.5,81 75,120 97.5,159 142.5,159"/>
+            <circle class="neural-core-glow" cx="120" cy="120" r="30"/>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
@@ -47,55 +80,69 @@
         <h2>Two-day schedule</h2>
       </div>
 
-      <div class="meta-strip reveal">
-        <div><div class="meta-label">DATES</div><div class="meta-value">December 10&ndash;11</div></div>
-        <div><div class="meta-label">DAY 1 FOCUS</div><div class="meta-value">Side-Channel Analysis</div></div>
-        <div><div class="meta-label">DAY 2 FOCUS</div><div class="meta-value">AI-Assisted Chip Design</div></div>
-        <div><div class="meta-label">FORMAT</div><div class="meta-value">Hands-on labs, in person</div></div>
-      </div>
-
-      <p class="people-kicker reveal" style="margin-top:30px;">DAY ONE &mdash; DECEMBER 10TH</p>
-
-      <div class="die card reveal" style="margin-bottom:20px;">
-        <span class="corner-bl"></span><span class="corner-br"></span>
-        <h3>Kickoff</h3>
-        <p style="margin:0;">A short introduction from both teams, introducing the startups and their related offerings.</p>
-      </div>
-
-      <div class="grid-2 reveal">
-        <div class="die card">
-          <span class="corner-bl"></span><span class="corner-br"></span>
-          <h3>Side-Channel Analysis</h3>
-          <ul class="feature-list">
-            <li>Brief introduction to symmetric key cryptography</li>
-            <li>Brief introduction to side-channels and faults</li>
-            <li>Lab: SCA and faults on ChipWhisperer Lite</li>
-          </ul>
+      <!-- ===== Reusable event flyer — duplicate this .flyer block for each future event ===== -->
+      <div class="flyer reveal">
+        <div class="flyer-header">
+          <span class="flyer-tag">WORKSHOP</span>
+          <h3>Secure Silicon: Hardware Security &amp; AI-Assisted Secure Chip Design</h3>
+          <div class="flyer-dates">December 10&ndash;11</div>
         </div>
-        <div class="die card">
-          <span class="corner-bl"></span><span class="corner-br"></span>
-          <h3>AI-Assisted Secure Chip Design</h3>
-          <ul class="feature-list">
-            <li>Introduction to the open-source flow using Yosys</li>
-            <li>Hardware trojans, and why security matters in chip design flows</li>
-            <li>Using AI in EDA: RAG, HyDE, chain-of-thought prompting, and agent loops</li>
-            <li>Lab: SynForce (agentic synthesis) on a 4-bit Galois-field inverter</li>
-          </ul>
+        <div class="flyer-body">
+          <div class="meta-strip" style="margin-top:0;">
+            <div><div class="meta-label">DATES</div><div class="meta-value">December 10&ndash;11</div></div>
+            <div><div class="meta-label">DAY 1 FOCUS</div><div class="meta-value">Side-Channel Analysis</div></div>
+            <div><div class="meta-label">DAY 2 FOCUS</div><div class="meta-value">AI-Assisted Chip Design</div></div>
+            <div><div class="meta-label">FORMAT</div><div class="meta-value">Hands-on labs, in person</div></div>
+          </div>
+
+          <p class="people-kicker" style="margin-top:30px;">DAY ONE &mdash; DECEMBER 10TH</p>
+
+          <div class="die card" style="margin-bottom:20px;">
+            <span class="corner-bl"></span><span class="corner-br"></span>
+            <h3>Kickoff</h3>
+            <p style="margin:0;">A short introduction from both teams, introducing the startups and their related offerings.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="die card">
+              <span class="corner-bl"></span><span class="corner-br"></span>
+              <h3>Side-Channel Analysis</h3>
+              <p class="kicker" style="margin:0 0 12px;">~10:00 AM until lunch &middot; led by Smita</p>
+              <ul class="feature-list">
+                <li>Brief introduction to symmetric key cryptography</li>
+                <li>Brief introduction to side-channels and faults</li>
+                <li>Lab: SCA and faults on ChipWhisperer Lite</li>
+              </ul>
+            </div>
+            <div class="die card">
+              <span class="corner-bl"></span><span class="corner-br"></span>
+              <h3>AI-Assisted Secure Chip Design</h3>
+              <p class="kicker" style="margin:0 0 12px;">~3:00 &ndash; 5:30 PM &middot; led by Tishya, with Tarun &amp; Hima</p>
+              <ul class="feature-list">
+                <li>Introduction to the open-source flow using Yosys</li>
+                <li>Hardware trojans, and why security matters in chip design flows</li>
+                <li>Using AI in EDA: RAG, HyDE, chain-of-thought prompting, and agent loops</li>
+                <li>Lab: SynForce (agentic synthesis) on a 4-bit Galois-field inverter</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="people-kicker" style="margin-top:36px;">DAY TWO &mdash; DECEMBER 11TH</p>
+
+          <div class="die card">
+            <span class="corner-bl"></span><span class="corner-br"></span>
+            <h3>AI-Assisted Secure Chip Design, continued</h3>
+            <p class="kicker" style="margin:0 0 12px;">~10:00 AM &ndash; 2:00 PM</p>
+            <ul class="feature-list">
+              <li>Introduction to trojans and equivalence checking</li>
+              <li>Automated verification</li>
+              <li>Lab: NETLAM and VerMI on standard benchmarks</li>
+            </ul>
+          </div>
         </div>
       </div>
+      <!-- ===== End flyer block ===== -->
 
-      <p class="people-kicker reveal" style="margin-top:36px;">DAY TWO &mdash; DECEMBER 11TH</p>
-
-      <div class="die card reveal">
-        <span class="corner-bl"></span><span class="corner-br"></span>
-        <h3>AI-Assisted Secure Chip Design, continued</h3>
-        <p class="kicker" style="margin:0 0 12px;">~10:00 AM &ndash; 2:00 PM</p>
-        <ul class="feature-list">
-          <li>Introduction to trojans and equivalence checking</li>
-          <li>Automated verification</li>
-          <li>Lab: NETLAM and VerMI on standard benchmarks</li>
-        </ul>
-      </div>
     </div>
   </section>
 
