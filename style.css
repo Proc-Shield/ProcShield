@@ -369,6 +369,7 @@ body.page-event{
 .neural-wrap{ width:100%; height:100%; }
 .neural-wrap svg{ width:100%; height:100%; overflow:visible; }
 .neural-core{ fill: var(--panel); stroke: var(--accent); stroke-width:2.4; filter: drop-shadow(0 0 9px var(--accent)); }
+.neural-notch{ fill: var(--bg); stroke: var(--accent-dim); stroke-width:1; }
 .neural-core-glow{ fill: var(--accent); opacity:0; animation: bigCoreGlow 3s ease-in-out infinite; }
 .neural-link{ stroke: var(--accent-dim); stroke-width:1.6; opacity:.85; animation: pinFlash 2.8s ease-in-out infinite; }
 .neural-node{ fill: var(--panel); stroke: var(--accent); stroke-width:1.8; }
