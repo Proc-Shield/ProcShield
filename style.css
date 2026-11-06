@@ -677,3 +677,24 @@ footer .flogo{ font-family: var(--mono); font-size:13px; color: var(--ink-dim); 
 }
 
 @keyframes ctMove{ 0%{ offset-distance:0%; opacity:0; } 8%{ opacity:1; } 90%{ opacity:1; } 100%{ offset-distance:100%; opacity:0; } }
+
+/* Career Details - Back to Careers Link */
+
+.page-career .hero-bg {
+    pointer-events: none;
+}
+
+.page-career .back-link {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--signal);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.page-career .back-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
