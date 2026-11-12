@@ -88,21 +88,36 @@
             <dd>Kindly reach out to our company and team using the form, or via email.</dd>
           </dl>
         </div>
-        <form class="reveal" onsubmit="return false;">
-          <div>
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required>
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required>
-          </div>
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn primary" style="cursor:pointer;">Send message</button>
-        </form>
+        
+<form class="reveal" id="contactForm">
+  <div>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+  </div>
+
+  <div>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
+
+  <!-- Hidden spam-trap field -->
+  <div style="position:absolute;left:-9999px;" aria-hidden="true">
+    <label for="website">Leave this empty</label>
+    <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+  </div>
+
+  <button type="submit" class="btn primary" style="cursor:pointer;">
+    Send message
+  </button>
+
+  <p id="formStatus" role="status" aria-live="polite"></p>
+</form>
+
       </div>
     </div>
   </section>
@@ -155,6 +170,61 @@
   </div>
 </footer>
 
+
 <script src="script.js"></script>
+
+<script>
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  const status = document.getElementById("formStatus");
+  const button = contactForm.querySelector('button[type="submit"]');
+
+  button.disabled = true;
+  button.textContent = "Sending...";
+  status.textContent = "Please wait, sending your message...";
+
+  const formData = {
+    name: contactForm.elements.name.value.trim(),
+    email: contactForm.elements.email.value.trim(),
+    message: contactForm.elements.message.value.trim(),
+    website: contactForm.elements.website.value.trim()
+  };
+
+  try {
+    const response = await fetch(
+      "https://procshield-contact-api.procshield.workers.dev",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      }
+    );
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.error || "Unable to send your message.");
+    }
+
+    status.textContent = "Thank you! Your message has been sent.";
+    contactForm.reset();
+
+  } catch (error) {
+    console.error("Contact form error:", error);
+    status.textContent =
+      "Sorry, your message could not be sent. Please try again or email contact@procshield.com.";
+  } finally {
+    button.disabled = false;
+    button.textContent = "Send message";
+  }
+});
+</script>
+
 </body>
+
 </html>
