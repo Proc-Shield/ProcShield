@@ -32,10 +32,17 @@
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">UPCOMING EVENT &mdash; DECEMBER 10&ndash;11</p>
+        <p class="eyebrow" id="eventStatus"
+         data-event-start="2026-12-10"
+         data-event-end="2026-12-11">
+         UPCOMING EVENT &mdash; DECEMBER 10&ndash;11, 2026
+        </p>
+
+        <!-- <p class="eyebrow">UPCOMING EVENT &mdash; DECEMBER 10&ndash;11</p> -->
         <h1 class="headline" style="max-width:18ch;">Secure Silicon: Workshop on Hardware Security and AI-assisted Secure Chip Design</h1>
-        <p class="lede">Two days, two tracks &mdash; side-channel analysis in the morning, AI-assisted secure chip design through the rest of the workshop. Hands-on labs throughout.</p>
+        <p class="lede" id="eventSummary">Two days, two tracks &mdash; side-channel analysis in the morning, AI-assisted secure chip design through the rest of the workshop. Hands-on labs throughout.</p>
         <div class="cta-row">
+          
           <a href="#program" class="btn primary">See the program</a>
           <a href="https://konfhub.com/securesilicon-2026-hands-on-workshop-on-hardware-security-and-ai-assisted-chip-design"
    class="btn primary"
@@ -105,15 +112,15 @@
       <div class="flyer reveal">
         <div class="flyer-header">
           <!-- <span class="flyer-tag">WORKSHOP</span> -->
-          <h3>SecureSilicon 2026: Hands-on Workshop on Hardware Security &amp; AI-Assisted Secure Chip Design</h3>
+          <h3 id="eventTitle">SecureSilicon 2026: Hands-on Workshop on Hardware Security &amp; AI-Assisted Secure Chip Design</h3>
           <!-- <div class="flyer-dates">December 10&ndash;11</div> -->
         </div>
         <div class="flyer-body">
           <div class="meta-strip" style="margin-top:0;">
-            <div><div class="meta-label">DATES</div><div class="meta-value">December 10&ndash;11</div></div>
-            <div><div class="meta-label">DAY 1 FOCUS</div><div class="meta-value">Side-Channel Analysis</div></div>
-            <div><div class="meta-label">DAY 2 FOCUS</div><div class="meta-value">AI-Assisted Chip Design</div></div>
-            <div><div class="meta-label">FORMAT</div><div class="meta-value">Hands-on labs, in person</div></div>
+            <div><div class="meta-label">DATES</div><div class="meta-value" id="eventDate">December 10&ndash;11</div></div>
+            <div><div class="meta-label">DAY 1 FOCUS</div><div class="meta-value" id="eventDay1">Side-Channel Analysis</div></div>
+            <div><div class="meta-label">DAY 2 FOCUS</div><div class="meta-value" id="eventDay2">AI-Assisted Chip Design</div></div>
+            <div><div class="meta-label">FORMAT</div><div class="meta-value" id="eventFormat">Hands-on labs, in person</div></div>
           </div>
 
           <p class="people-kicker" style="margin-top:30px;">DAY ONE &mdash; DECEMBER 10TH</p>
